@@ -1,20 +1,25 @@
 {
   "name": "Site Bomb",
-  "version": "1.0",
+  "version": "1.1",
   "description": "You can drop bombs on any pages",
-  "permissions": ["activeTab", "http://*/*", "https://*/*"],
+  "permissions": ["activeTab", "scripting"],
+  "host_permissions": ["http://*/*", "https://*/*"],
   "background": {
-    "scripts": ["background.js"],
-    "persistent": false
+    "service_worker": "background.js"
   },
   "icons": {
     "16": "16.png",
     "48": "48.png",
     "128": "128.png"
   },
-  "browser_action": {
-    "default_title": "Site Bomb"
+  "action": {
+    "default_title": "Site Bomb",
+    "default_icon": {
+      "16": "16.png",
+      "48": "48.png",
+      "128": "128.png"
+    }
   },
-  "author": "YuikoIto",
-  "manifest_version": 2
+  "author": "Yuiko Koyanagi",
+  "manifest_version": 3
 }
