@@ -236,11 +236,13 @@
       window.FONTBOMB_LOADED = true;
       this.bombs = [];
       this.body = document.getElementsByTagName("body")[0];
-      if ((_ref2 = this.body) != null) {
-        _ref2.onclick = function (event) {
+      document.addEventListener(
+        "click",
+        function (event) {
           return _this.dropBomb(event);
-        };
-      }
+        },
+        true
+      );
       this.body.addEventListener("touchstart", function (event) {
         return (_this.touchEvent = event);
       });
